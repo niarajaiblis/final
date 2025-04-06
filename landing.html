@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogiFest - Jasa Pengiriman</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="https://s3-alpha-sig.figma.com/img/5630/a6ea/fb2acb10161de6214ef9cbc45357e27d?Expires=1743984000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=VWS~0fD~o1GGNfYYe2irWpVHWAeZ259Ryrofvz01APkKMvtzwjdi114iMaLO8wFNMEpLBCgNk7pdAv0FiLbz1fsQG-GPc3i~arUtuoJ8W2E5YCxLR4fGfA5n2dPwNT-lfnFGYbTMUEHjGPpGXTYSxaeuUlHw5n3n2~6hv-1H9VyL7bzDuxz9qtLWdrtrwFXuz-D7q36nuchYmWlSLtrC6YV56xLnRTABWiJ-bDSSI5nF-HSpf-ZjDqiArB4noTVwXxhMVZkkvmQPBLOwrf01fApyW5Il-Ozp78nFphPeDnUGLtjG1PjChcV09NcQ0Nhhtc~MH2uXccqOhnNiSpkkQQ__" alt="LogiFest">
+            </div>
+            <div class="nav-links">
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">Order <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="form-pengiriman.html">Pick Up</a>
+                        <a href="#">Drop Off</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">International <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#">International Orders</a>
+                        <a href="#">International Tracking</a>
+                        <a href="#">International Shipping Rates</a>
+                    </div>
+                </div>
+                <a href="#">Layanan</a>
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">Information <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#">FAQ</a>
+                        <a href="#">Packing Information</a>
+                        <a href="#">Terms</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">About Us <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="company-profile.html">Company Profile</a>
+                        <a href="#">News & Event</a>
+                        <a href="#">Career</a>
+                        <a href="chatadmin.html">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-buttons">
+                <div id="beforeLogin">
+                    <a href="SignUp_LogIn_Form.html" class="signup-btn">Sign Up</a>
+                    <a href="SignUp_LogIn_Form.html" class="login-btn">Login</a>
+                </div>
+                <div id="afterLogin" style="display: none;">
+                    <div class="dropdown">
+                        <div class="user-profile">
+                            <span id="userEmail"></span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="dropdown-menu">
+                            <a href="#">Profile</a>
+                            <a href="#">Settings</a>
+                            <a href="#" id="logoutBtn">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <!-- Service Cards -->
+                <div class="service-cards">
+                    <div class="service-card">
+                        <div class="lacak-paket-btn">
+                            <img src="lacak.png" alt="Lacak Paket">
+                            <span>Lacak Paket</span>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <a href="shipping_calculator.html" class="service-link">
+                            <img src="money.png" alt="Cek Tarif">
+                            <span>Cek Tarif</span>
+                        </a>
+                    </div>
+                    <div class="service-card">
+                        <img src="droppoint.png" alt="Cari Drop Point">
+                        <span>Cari Drop Point</span>
+                    </div>
+                </div>
+
+                <div class="search-container">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Masukan nomor resi Anda minimal 10 nomor resi">
+                        <button class="search-btn">Cari</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!--Promo Section-->
+    <div class="content">
+        <section class="promo-section">
+            <h2>Ada Promo Menarik Nih!!!</h2>
+            <div class="promocards">
+                <div class="slider">
+                    <img id="slide-1" src="https://s3-alpha-sig.figma.com/img/6e4b/7bc2/f467af5d508f99b8171d2a8c27981f05?Expires=1743984000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=e5OXSuS9y9pRUa5LxlY1tKQVgfo1fShBQiezfOK2dMkPB8qB5qX25NzJ4JaR2Bzh8ZRhw7Laoa7Dhelhn-zSGzjQa8wfQtSiXxYsTtP6uZRnyCNLoZHRXf6IbDyp3QlpCtBMSVQ5fapQxu6nnuEfhJR1lZZvNpIhQdbXJVHGVZcz1rW2DKOaddfZe50yFCQLUEFre6BD1cQtBFsW2OMf9y0ERRp6KN3x7Mjtqc~bgFq-4ske8gMflE8Yb~yaOCkfjMAhOzvNMIV8kHwL~qllIaMwHG-2CGGDB7YTKfOBYCZf8-11PCkwWO6ICQZ26ByTuaVkQzTCh68z3-Bk~j0P7Q__" alt="Promo 1">
+                    <img id="slide-2" src="https://s3-alpha-sig.figma.com/img/ae7a/3a64/b83dae7f07994229715ffe862660450b?Expires=1743984000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=PaYWVWIer8a1WN2MMMVeNYAgWVb-XVS7O0CUEqo6Uc-x9lZh23HHMXaXNvhIMLUJeU3J-bhwy7wz2OL2sVHOZjEjZoDLBlZRkRSUFIYBEKRCOGTXuCqIMnDSBjoJvxT8ucrGM7RCeIIIqogylIbccR6~Ydi023D3aQFSF7ppbePQ4XQXVmu9vdXC9ZYc6E4kNEMcSHQWKla6jgWNQevdIXpGWr3BavM7fZwTP1UvaDbAPFBJvSZdtLEQGYG6p~LojCkpiopQ3iWi9BrYcT3ED1wcveE2GC1KBUNKQS0yICqv6P66TOcSAYfiN8ZUM3I4bV5S-kCisRizq1GnpZh9FQ__" alt="Promo 2">
+                    <img id="slide-3" src="https://s3-alpha-sig.figma.com/img/fba6/74b4/39df6e60894916dce091e028c7c391fe?Expires=1743984000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=XO5vAaNr8yv0yxIfOwEpSRV1uCw-annrg09Di1Aiv37P1yGeaQX0Ib8ox9XP7CiwkhGV7jfCial3R1hstoRth~u1U69vHZbKLmXfiH64RHDfXoGDe-B-RmDTAyjdEv4srpi7ZnUVQC-tIE0K39kBw7hwKtfP-J6XpfjOsDKpbOgubILfttNxzY0svrhVZs-uMP5H3i8f7mSASPf-sqt5sCdaMT7kQAXmBS-z7RVjgMRBcQGdNRygg6VAXxUAlOsUpF5xpfZ9To6j5GdPXvJ8lZvLqQzir5SXUjvMV9MnfgjrieXNzU5wOivUDbLdiBNXNdMDKN1tp0CKbQ-xs8TWXg__" alt="Promo 3">
+                    <img id="slide-4" src="https://s3-alpha-sig.figma.com/img/af9f/ed41/b1ceac7bcd81d26462e0575c249d3436?Expires=1743984000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=C0aFxsVPO8b7wVUbR7y-DI~Pii-GXf1ES7~tD4Q8GEbbaWLhScyxHUM4w2Br9rdbmDGxtS1opOktlq7xB4jb2QO7dtrpd3xCtkHLM3j8HuM-YBOtZ5DPRDlemL~Rt9gKb6tkBBSFaBRY-j2j3U2yOEuIoVA2yDqIJEoXdti9MbRKsKaS5iKnAhCo9mritYNxt-awjl~AIDpHYOy4oKtVtCDfrqgYpOyuNEteMeiogYgAFS39r676sdisbRyiGvP-8B~zQXwL67kHbpacMnhXH33FJauxoE2PYCcRcNcUvs6AAezwR9~QJ73ha9-lJ5~4CEezMix4m87kzxlZ3hsScw__" alt="Promo 4">
+                    <img id="slide-5" src="https://s3-alpha-sig.figma.com/img/5ed6/6457/a8a7c0053437135ae97b845afa81eee6?Expires=1743984000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=SNMHK7LyftXi5J6Zltc40IqyZQ13zf8TSd33xj-rKqA2FzTdB-JQBuBIGDJ-pHMFgNrL9iscTu-2UNsgWA-wkf1gP4m-HdYOhUkULKZ7-gONWyEiR44Sd5ciIIXAQGxw8Tl9-C0nFjQI32EOI~YqFTXYWz5rGo2FqhG9eZKhuirvsC~vBYMFgKk6MMMB9c1mMNPJgMVOJN8ovef0JHms5X0yWZI6TynLqZUamVb0G-iG3XN1-l7QAKLedkBlVc7zNxeKjkwZkmPwTARmDSuvV4jaICFXvsv1NboBAHQRKfV3n~-p8uucQjotJa~qYKKT4RvJ0K5uN9v9HfbxvBYZ3A__" alt="Promo 5">
+                </div>
+                <div class="slider-nav">
+                    <a href="#slide-1"></a>
+                    <a href="#slide-2"></a>
+                    <a href="#slide-3"></a>
+                    <a href="#slide-4"></a>
+                    <a href="#slide-5"></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Section -->
+        <section class="download-section">
+            <div class="Lion-Parcel">
+                <div class="Lion-Parcel-Content">
+                    <div class="box">
+                        <img src="Ekspedisi-cepat.png" alt="ekspedisi cepat">
+                    </div>
+                    <div class="Lion-Parcel-Text">
+                        <h2>Jasa Pengiriman Tercepat dan Terpercaya,
+                            menjangkau seluruh pelosok Indonesia
+                            menggunakan jalur darat</h2>
+                        <p>Dengan Lion Parcel, pengiriman aman, murah, cepat dan terjamin sampai ke tempat tujuan di seluruh lokasi Indonesia maupun internasional, yang didukung oleh akomodasi pesawat Lion Group.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="download-container">
+                <div class="download-content">
+                    <div class="phone-mockup">
+                        <img src="phone.png" alt="App Preview">
+                    </div>
+                    <div class="download-text">
+                        <h2>Download LogiFest Sekarang</h2>
+                        <p>Aplikasi Jasa Pengiriman yang bisa kirim paket atau barang serta lacak pengiriman dan mudah digunakan di Aplikasi LogiFest</p>
+                        <div class="download-buttons">
+                            <a href="#" class="play-store">
+                                <img src="https://s3-alpha-sig.figma.com/img/fa8a/be9e/3e1e5d8a185664e9fb26908f85e7cdbd?Expires=1743984000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=mCeEuK2Pi2MNQVoG7lHU3G4cjRtxot5gc7e5AR94HMyYNTX8yFXPt8cfCjx2OLpV~Z-2wS5s19luDXsansmETVhGS~5Zdko6lWPAYjeHDYvpv6AGlOats~cqruXOrPI3zhdgSIWWFVqj116WNA9lQOw~zM9QpRFC1QR-qb6sxlJbADRVdCNJg32yslbusACix7YgJkVzv8og1-~TyvPPWfRe2DUHx9PI69J7KKkYRBqBcL4UKLfjUv-jiqY3enC5WlMFQfxMRBYBDhPgl7udkz5EzItEnoEn-7-3mqQfxGhzn~DJZQeJYSqE~d8helZiJGJtiMakZ3HYAtZDqAhvAQ__" alt="Google Play">
+                            </a>
+                            <a href="#" class="app-store">
+                                <img src="https://s3-alpha-sig.figma.com/img/9dfa/22a9/4524ffd41bc776803e1b1768cd4ed87b?Expires=1743984000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=gKCMrlijTRzY4091dCG35nj7acOHjF5a8i4FO-XCe161JpeOVxwMhHGwC9HHXvF1e7ICTVndAS9fZqgZJO~d9Gw0FHxScNty1zDImjihTpQ3t5O7JHMkZnPvBB1fgvgHZ9lyRXyZv3o2be15WrZDHBSWtN52i0a3GousX0Fb3t5VK1~cng16d9~SP7Jd3UZIqSs7eHLecPd8MUc4faHOQuR-AAhIe-iSP~6PjAGYNnRcek2TJoyNX6DJ20cfSseE9JG-SoZEFc5nOn5~KT9BWhw2KRFBiSfyopuwRYoV9IUluvmHVzGPI3T2xp5wwRjbbyzZpCJXbVix~8z3Hg6j2w__" alt="App Store">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <div class="footer-address">
+                        Ploso 25, 1 Jalan Gempol - Surabaya 16, 46200<br>
+                        Working Hour: Senin-Jumat
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="#">Home</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Event</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Here to Help</h3>
+                    <a href="#">FAQ</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LogiFest. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="trackingModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="tracking-info">
+                <h1>0123 4012 3401 0100</h1>
+                <button class="detail-btn" id="detail-btn">Detail Info</button>
+                <button class="track-btn">Track Info</button>
+            </div>
+            <div class="shipment-info">
+                <p>Dikirim: 12 April 2025</p>
+                <p>Waktu: 12:21 WIB</p>
+            </div>
+            <div class="status-message">
+                <p>Kurir telah mulai perjalanan menuju ke lokasi anda, cek treacking perjalanan kurir untuk mengetahui posisi paket anda sekarang. Terimakasih!</p>
+            </div>
+            <div class="timeline">
+                <div class="event">
+                    <p>Paket Diterima di :</p>
+                    <strong>JNE Center Semarang</strong>
+                    <span>15/03/2025 12:32</span>
+                </div>
+                <div class="event">
+                    <p>Paket Diantar oleh :</p>
+                    <strong>JNE Center Semarang</strong>
+                    <span>15/03/2025 14:20</span>
+                </div>
+                <div class="event">
+                    <p>Paket Diterima di :</p>
+                    <strong>Sorting Center Semarang</strong>
+                    <span>16/03/2025 10:14</span>
+                </div>
+                <div class="event">
+                    <p>Paket Diteruskan ke tujuan :</p>
+                    <strong>Uxspress</strong>
+                    <div class="actions">
+                        <button class="refresh-btn">Refresh track</button>
+                        <button class="detail-lokasi-btn">Detail Lokasi</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="track-page" id="tracking">
+        <div class="track-content">
+            <span class="keluar">&times;</span>
+            <div class="track-info">
+                <h1>0123 4012 3401 0100</h1>
+                <button class="detail-btn" id="detail-btn">Detail Info</button>
+                <button class="track-btn">Track Info</button>
+            </div>
+            <div class="tracking-info">
+                <div class="shipping-time">
+                  <p>Dikirim: 12 April 2025</p>
+                  <p>Waktu: 12:21 WIB</p>
+                </div>
+                <div class="shipping-message">
+                  <p>Kurir telah mulai perjalanan menuju ke lokasi anda, cek tracking perjalanan kurir untuk mengetahui posisi paket anda sekarang. Terimakasih!</p>
+                </div>
+            </div>
+            <div class="tracking-map">
+                <!-- Google Maps Embed -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              </div>
+            
+              <div class="chatkurir">
+                <img class="ft-kurir" src="https://s3-alpha-sig.figma.com/img/1fab/2cee/ffe36eca1dcd6e3abcd9e83fe27f91f8?Expires=1744588800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=m4P9dkNx6r3tw8k23dme1AcnNi8rPbWaHQcKBpwvNUrWJQr0BrK7aGksYaiP6lQ54eLGPYNROkYChBiI-D19ZaTltZ9DeJXYxSNF47JFYdL1I~PmgjwcA1AwR80NOHicFlvXeeHH~OKs15pahvUx1wNrviJHxx~ES116x3lWQzALXQ3IJt7I-cqmkU7gpFotWfusT10YpaCY3-xWr8Y6~wAPl8UkBrSIq5xkOXzV2kcmDQZVqxGlIUNiJrmrgw7jHfYe7-zH53qPmVbK3ZOofo4Eoq5ExmCjIk9t3uCu4ywr4QUsSvwiCdaWtrTmiSHZHWQnkTm4aWA3VqJK6y2hxw__" alt="kurir">
+                <div class="head-text">
+                    <h2>Aksara Juna</h2>
+                    <p>K 4433 PKL</p>
+                </div>
+                <button class="chat-btn"><p>chat</p></button>
+              </div>
+              
+        </div>
+    </div>
+
+    <!-- Chat widget -->
+    <div class="chat-widget">
+        <img src="https://s3-alpha-sig.figma.com/img/a8c1/32eb/87b7254d9674ced00fbb4ebb6155d71a?Expires=1743984000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=AyAVipzKHgjcFhm9jtiki49h5g8FTcTbPoddR5kUVNsxtWFx1Yv-vLgT7mT4HpYhd8opl04EVz27-cliTl3oU6hn6fubldoDbB8viu5EBMFHy8tm2KoyCVAMZFkNyPRsdEWp-V-IyQpByB9yMnqHbY9UEr2rXINjSyiEORZGEKo9IW~9knieZ-JpFqPKA7uNzEc4uKbLw3Nr2lIdJzO3DpwkeZB0n9Qs5Tu6SLXnHSugkQlS6FtRn4biLHzzdYcNOnTtO6SQfAdUB7an13IreIKZW7BSFO3vQ77L4PNJP198hXwbpYQVeqgcPT7nCzLwhTYGaraz5BKYi11n85WNRQ__" alt="Customer Service">
+        <span>Chat with Us</span>
+    </div>
+
+    <script src="auth_new.js"></script>
+    <script src="landing.js"></script>
+</body>
+</html> 

@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: rgba(221, 221, 221, 1);
+}
+
+.chatbot {
+    max-width: 800px;
+    margin: 100px auto 40px;
+    overflow: hidden;
+    background: rgba(221, 221, 221, 1);
+    border-radius: 15px;
+    box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
+                0 32px 64px -48px rgba(0, 0, 0, 0.5);
+}
+
+.chatbot header {
+    background: #fff;
+    padding: 16px 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.chatbot header .klp-back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    margin-left: 10px;
+    justify-content: center;
+}
+
+.chatbot header .back {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.chatbot header .back img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-left: 10px;
+    object-fit: cover;
+}
+
+.chatbot header .ft-kurir img {
+    width: 80px; 
+    height: 80px;
+    border-radius: 50%; 
+    margin: 10px;
+    object-fit: cover;
+}
+
+.chatbot header img {
+    width: 80px;
+    height: 80px;  
+    border-radius: 50%; 
+    margin: 10px;
+    object-fit: cover;
+}
+
+.chatbot .head-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.chatbot .chat-info {
+    margin: 20px auto;
+    align-items: center;
+    justify-content: center;
+    display: block;
+}
+
+.chatbot .chat-info .info-1 {
+    background: rgba(40, 137, 242, 0.14);
+    color: rgba(128, 123, 123, 1);
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px;
+    margin-bottom: 80px;
+}
+
+.chatbot .chat-info .info {
+    position: relative;
+}
+
+.chatbot .chat-info .info p {
+    background: rgba(40, 137, 242, 0.14);
+    color: rgba(128, 123, 123, 1);
+    padding: 2px 2px;
+    padding-top: 65px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px;
+    position: relative;
+    z-index: 0;
+}
+
+.chatbot .chat-info .info img {
+    background: #fff;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    z-index: 1;
+}
+
+.chatbot h2 {
+    color:black;
+    font-size: 1.4rem;
+}
+
+.tanggal {
+    text-align: center;
+    color: rgba(128, 123, 123, 1);
+}
+
+.chatbot .chatbox {
+    height: 510px;
+    overflow-y: auto;
+    padding: 15px 20px 70px;
+}
+
+.chatbox .chat {
+    display: flex;
+}
+
+.chatbox .outgoing {
+    justify-content: flex-end;
+    margin: 20px 0;
+}
+
+.chatbox .chat p {
+    color: black;
+    font-size: 0.95rem;
+    padding: 12px 16px;
+    border-radius: 10px 10px 0 10px;
+    background: rgba(0, 123, 255, 0.31);
+    max-width: 400px;
+}
+
+.chatbox .incoming p {
+    color: black;
+    background: #fff;
+    border-radius: 10px 10px 10px 0;
+}
+
+.chat-input {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    background: #fff;
+    padding: 5px 20px;
+    border-top: 1px solid #ccc;
+}
+
+.chat-input textarea {
+    height: 55px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    outline: none;
+    font-size: 0.95rem;
+    resize: none;
+    padding: 16px 15px 16px 10px;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.chat-input .add-btn {
+    background: none;
+    border: 1px solid #ddd;
+    font-size: 20px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.chat-input #send-btn {
+    background: rgba(107, 162, 222, 1);
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    padding: 10px 15px;
+    visibility: hidden;
+}
+
+.chat-input #send-btn img {
+    width: auto;
+    height: 30px;
+    align-self: flex-end;
+}
+
+.chat-input textarea:valid ~ #send-btn {
+    visibility: visible;
+}
+
+@media (max-width: 490px) {
+    .chatbot {
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+    .chatbot .chatbox {
+        height: 90%;
+    }
+}

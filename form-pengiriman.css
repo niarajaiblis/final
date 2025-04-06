@@ -1,0 +1,254 @@
+:root {
+    --primary: #007bff;
+    --primary-dark: #0069d9;
+    --danger: #dc3545;
+    --danger-dark: #c82333;
+    --success: #28a745;
+    --success-dark: #218838;
+    --border-radius: 6px;
+    --box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    --transition: all 0.3s ease;
+}
+
+/* Back Button */
+.button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  font-size: large;
+  font-family: inherit;
+  font-weight: bold;
+  color: white;
+  background-color: var(--primary);
+  padding: 0.8em 1.5em;
+  border-radius: var(--border-radius);
+  border: none;
+  box-shadow: 0px 4px var(--primary-dark);
+  z-index: 10;
+  transition: var(--transition);
+}
+
+.button:hover {
+  background-color: var(--primary-dark);
+}
+
+.button:active {
+  position: absolute;
+  top: 24px;
+  left: 20px;
+  box-shadow: 0px 0px;
+}
+
+/* Base Typography */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 1rem 0;
+}
+
+/* Container & Layout */
+.container {
+    max-width: 800px;
+    width: 90%;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    box-sizing: border-box;
+}
+
+.form-section {
+    margin-bottom: 2rem;
+    padding: 1.25rem;
+    background: #f8f9fa;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 1rem;
+    }
+    
+    .form-section {
+        padding: 1rem;
+    }
+    
+    .name-group, 
+    .city-state-group {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}
+
+.form-section:hover {
+    box-shadow: 0 0 0 2px var(--primary);
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.required:after {
+    content: " *";
+    color: var(--danger);
+}
+
+input, select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ced4da;
+    border-radius: var(--border-radius);
+    font-family: 'Poppins', sans-serif;
+    transition: var(--transition);
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+}
+
+/* Buttons */
+.submit-btn, .reset-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.submit-btn {
+    background-color: var(--success);
+    color: white;
+    margin-right: 1rem;
+}
+
+.submit-btn:hover {
+    background-color: var(--success-dark);
+}
+
+.reset-btn {
+    background-color: var(--danger);
+    color: white;
+}
+
+.reset-btn:hover {
+    background-color: var(--danger-dark);
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 2rem;
+    width: 80%;
+    max-width: 600px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.close:hover {
+    color: #333;
+}
+
+.receipt-section {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.receipt-section:last-child {
+    border-bottom: none;
+}
+
+.close-btn {
+    background-color: var(--primary);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    transition: var(--transition);
+}
+
+.close-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Form Layout Helpers */
+.name-group, .city-state-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.name-group > .form-group, 
+.city-state-group > .form-group {
+    flex: 1;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2rem;
+}
+
+.helper-text {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-top: 0.25rem;
+}

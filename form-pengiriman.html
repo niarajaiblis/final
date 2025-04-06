@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pengiriman - LogiFest</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="form-pengiriman.css">
+</head>
+<body>
+    <button class="button">Back</button>
+    
+    <div class="container">
+        <form id="shippingForm">
+            <!-- Pengirim Section -->
+            <div class="form-section">
+                <h2>Nomor Urut Resi</h2>
+                <div class="form-group">
+                    <label>Resi</label>
+                    <input type="text" id="resi" value="Invalid API Key" disabled>
+                </div>
+                <div class="form-group">
+                    <label class="required">Reg. Online</label>
+                    <input type="text" id="regOnline" placeholder="Masukkan nomor registrasi" required>
+                </div>
+                <div class="form-group">
+                    <label class="required">Berat (kg)</label>
+                    <select id="weight" required>
+                        <option value="">Pilih Berat</option>
+                        <option value="1">1 kg</option>
+                        <option value="2">2 kg</option>
+                        <option value="3">3 kg</option>
+                        <option value="4">4 kg</option>
+                        <option value="5">5 kg</option>
+                        <option value="6">6 kg</option>
+                        <option value="7">7 kg</option>
+                        <option value="8">8 kg</option>
+                        <option value="9">9 kg</option>
+                        <option value="10">10 kg</option>
+                    </select>
+                </div>
+                <div class="name-group">
+                    <div class="form-group">
+                        <label class="required">Nama Depan</label>
+                        <input type="text" id="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Nama Belakang</label>
+                        <input type="text" id="lastName">
+                    </div>
+                </div>
+                <div class="form-group address-group">
+                    <label>Alamat</label>
+                    <input type="text" id="streetAddress" placeholder="Alamat">
+                    <input type="text" id="streetAddress2" placeholder="Detail Alamat Tambahan">
+                    <div class="city-state-group">
+                        <div class="form-group">
+                            <input type="text" id="city" placeholder="Kota">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="state" placeholder="Provinsi">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Penerima Section -->
+            <div class="form-section">
+                <h2>PENERIMA</h2>
+                <h3>Data Penerima</h3>
+                <div class="name-group">
+                    <div class="form-group">
+                        <label class="required">Nama Depan</label>
+                        <input type="text" id="receiverFirstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Nama Belakang</label>
+                        <input type="text" id="receiverLastName">
+                    </div>
+                </div>
+                <div class="form-group address-group">
+                    <label class="required">Alamat</label>
+                    <input type="text" id="receiverStreetAddress" placeholder="Alamat" required>
+                    <input type="text" id="receiverStreetAddress2" placeholder="Detail Alamat Tambahan">
+                    <div class="city-state-group">
+                        <div class="form-group">
+                            <input type="text" id="receiverCity" placeholder="Kota" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="receiverState" placeholder="Provinsi" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="required">Nomor Telepon</label>
+                    <input type="tel" id="receiverPhone" required>
+                    <div class="helper-text">Harus di isi (Penerima)</div>
+                </div>
+                <div class="form-group">
+                    <label class="required">FROM</label>
+                    <select id="from" required>
+                        <option value="">Pilih Kota</option>
+                        <option value="jakarta">Jakarta</option>
+                        <option value="surabaya">Surabaya</option>
+                        <option value="bandung">Bandung</option>
+                        <option value="medan">Medan</option>
+                        <option value="semarang">Semarang</option>
+                        <option value="yogyakarta">Yogyakarta</option>
+                        <option value="makassar">Makassar</option>
+                        <option value="palembang">Palembang</option>
+                        <option value="balikpapan">Balikpapan</option>
+                        <option value="manado">Manado</option>
+                        <option value="denpasar">Denpasar</option>
+                        <option value="malang">Malang</option>
+                        <option value="padang">Padang</option>
+                        <option value="pekanbaru">Pekanbaru</option>
+                        <option value="banjarmasin">Banjarmasin</option>
+                        <option value="samarinda">Samarinda</option>
+                        <option value="tasikmalaya">Tasikmalaya</option>
+                        <option value="pontianak">Pontianak</option>
+                        <option value="cirebon">Cirebon</option>
+                        <option value="bekasi">Bekasi</option>
+                        <option value="depok">Depok</option>
+                        <option value="tangerang">Tangerang</option>
+                        <option value="bogor">Bogor</option>
+                        <!-- Tambahkan kota lainnya sesuai kebutuhan -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Prop. Tujuan</label>
+                    <input type="text" id="propTujuan">
+                    <div class="helper-text">Daerah yang tidak terjangkau</div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">Kirim</button>
+                    <button type="reset" class="reset-btn">Reset</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Receipt Popup -->
+    <div id="receiptModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Resi Pengiriman</h2>
+            <div id="receiptContent"></div>
+            <button class="close-btn">Close</button>
+        </div>
+    </div>
+
+    <script src="form-pengiriman.js"></script>
+</body>
+</html> 
